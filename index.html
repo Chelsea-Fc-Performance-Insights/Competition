@@ -361,12 +361,15 @@
     </div>
     <div class="row mb-4">
       <div class="col-lg-12 text-center">
-        <button class="filter-btn" data-filter="A-E">A-E</button>
-        <button class="filter-btn" data-filter="F-J">F-J</button>
-        <button class="filter-btn" data-filter="K-O">K-O</button>
-        <button class="filter-btn" data-filter="P-T">P-T</button>
-        <button class="filter-btn" data-filter="U-Z">U-Z</button>
-          <br/><br/><i>*Groups will be under the individual who submitted the project</i>
+    <div class="filter-container">
+      <button class="filter-btn" data-filter="A-E">A-E</button>
+      <button class="filter-btn" data-filter="F-J">F-J</button>
+      <button class="filter-btn" data-filter="K-O">K-O</button>
+      <button class="filter-btn" data-filter="P-T">P-T</button>
+      <button class="filter-btn" data-filter="U-Z">U-Z</button>
+    </div>
+          <br/>
+<p class="filter-note"><i>*Groups will be under the individual who submitted the project</i></p>
       </div>
     </div>
 
@@ -2607,9 +2610,6 @@
 </div>
 
 
-
-
-
 </div>
   </div>
 </section>
@@ -2635,9 +2635,16 @@
     transition: background-color 0.3s ease;
   }
 
+  .filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
   .filter-btn {
     padding: 8px 16px;
-    margin: 0 5px;
     border: 1px solid #162447;
     background-color: #fff;
     color: #162447;
@@ -2653,7 +2660,7 @@
     color: #fff;
   }
 
-    .image-container {
+  .image-container {
     position: relative;
     width: 100%;
     padding-top: 56.25%; /* 16:9 Aspect Ratio */
@@ -2674,7 +2681,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(22, 36, 71, 0.8); /* Dark blue with some transparency */
+    background-color: rgba(22, 36, 71, 0.8);
     color: white;
     border: none;
     width: 40px;
@@ -2683,7 +2690,7 @@
     font-size: 18px;
     cursor: pointer;
     z-index: 10;
-    display: none; /* Hide buttons by default */
+    display: none;
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease;
@@ -2715,14 +2722,14 @@
   }
 
   .carousel-btn:hover {
-    background-color: rgba(22, 36, 71, 1); /* Solid dark blue on hover */
+    background-color: rgba(22, 36, 71, 1);
   }
 
   .single-showcase:hover .carousel-btn {
-    display: flex; /* Show buttons on hover */
+    display: flex;
   }
 
-    .link-icon {
+  .link-icon {
     font-size: 0.8em;
     margin-left: 5px;
     color: #162447;
@@ -2739,6 +2746,25 @@
 
   .no-link:hover .single-showcase {
     background-color: transparent;
+  }
+
+  .filter-note {
+    text-align: center;
+    font-style: italic;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .filter-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .filter-btn {
+      width: 80%;
+      max-width: 200px;
+      margin: 5px 0;
+    }
   }
 </style>
 
