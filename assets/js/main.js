@@ -83,3 +83,46 @@
     new WOW().init();
 
 })();
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  // ... (keep your existing code)
+
+  // Add carousel functionality
+  const carousels = document.querySelectorAll('.carousel');
+
+  carousels.forEach(carousel => {
+    const images = carousel.querySelectorAll('.carousel-image');
+    const prevButton = carousel.parentElement.querySelector('.prev');
+    const nextButton = carousel.parentElement.querySelector('.next');
+    let currentIndex = 0;
+
+    function showImage(index) {
+      images.forEach(img => img.classList.remove('active'));
+      images[index].classList.add('active');
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    }
+
+    nextButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      nextImage();
+    });
+
+    prevButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      prevImage();
+    });
+
+    // Auto-advance carousel
+    setInterval(nextImage, 5000); // Change image every 5 seconds
+  });
+});
