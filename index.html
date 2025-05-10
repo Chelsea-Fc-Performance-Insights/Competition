@@ -148,6 +148,9 @@
           <li class="nav-item">
       <a class="page-scroll" href="#challenge"><span>Challenge</span></a>
     </li>
+           <!--    <li class="nav-item">
+      <a class="page-scroll" href="#winners"><span>Winners</span></a>
+    </li> -->
           <li class="nav-item">
       <a class="page-scroll" href="#gallery"><span>Gallery</span></a>
     </li>
@@ -163,9 +166,9 @@
     <li class="nav-item">
       <a class="page-scroll" href="#judges"><span>Judging</span></a>
     </li>
-          <li class="nav-item">
+        <!--   <li class="nav-item">
       <a class="page-scroll" href="#entry"><span>Entry</span></a>
-    </li>
+    </li>-->
     <li class="nav-item">
       <a class="page-scroll" href="#faq"><span>FAQ</span></a>
     </li>
@@ -298,6 +301,284 @@
       </div>
    </div>
 </section>
+<!--
+ ========================= Winners section start =========================
+<style>
+  .winner-box {
+    border: 3px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    margin-Bottom: 20px;
+  }
+
+  .winner-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .winner-box:hover .feature-content {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .winner-box-orange {
+    border-color: #ED602D;
+  }
+
+  .feature-icon {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    overflow: hidden;
+  }
+
+  .feature-icon img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 8px;
+  }
+
+  .feature-content {
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    padding: 10px;
+  }
+
+  .feature-content h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(22, 36, 71, 0.8);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .carousel-btn::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    display: inline-block;
+  }
+
+  .carousel-btn.prev {
+    left: 10px;
+  }
+
+  .carousel-btn.next {
+    right: 10px;
+  }
+
+  .carousel-btn.prev::before {
+    transform: rotate(-135deg);
+  }
+
+  .carousel-btn.next::before {
+    transform: rotate(45deg);
+  }
+
+  .carousel-btn:hover {
+    background-color: rgba(22, 36, 71, 1);
+  }
+
+  .winner-box:hover .carousel-btn {
+    display: flex;
+  }
+</style>
+<section id="winners" class="feature-section feature-style-2" style="background-color: #f8f9fa; padding: 50px 0;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title text-center mb-60">
+          <h3 class="mb-15 custom-font">Winners</h3>
+          <p>Congratulations to the winners of the CFC Performance Insights Vizathon!</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Winner 1
+      <div class="col-lg-3 col-md-6">
+        <a href="#" class="winner-box winner-box-orange">
+          <div class="feature-icon" data-folder=" ------ " data-image-count="3">
+            <img src="images/------  .jpg" alt="Winner">
+          </div>
+          <div class="feature-content">
+            <h4 class="mb-2 custom-font">First Last</h4>
+            <p style="font-size: 1.1rem;">Overall Winner</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Winner 2
+      <div class="col-lg-3 col-md-6">
+        <a href="#" class="winner-box">
+          <div class="feature-icon" data-folder="------ " data-image-count="2">
+            <img src="images/------ /1.jpg" alt="Winner">
+          </div>
+          <div class="feature-content">
+            <h4 class="mb-2 custom-font">First Last</h4>
+            <p style="font-size: 1.1rem;">Best Component or Module</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Winner 3
+      <div class="col-lg-3 col-md-6">
+        <a href="#" class="winner-box">
+          <div class="feature-icon" data-folder="------ " data-image-count="4">
+            <img src="images/ ------ /1.jpg" alt="Winner">
+          </div>
+          <div class="feature-content">
+            <h4 class="mb-2 custom-font">First Last</h4>
+            <p style="font-size: 1.1rem;">Best Behavioural Nudge</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Winner 4
+      <div class="col-lg-3 col-md-6">
+        <a href="#" class="winner-box">
+          <div class="feature-icon" data-folder="------ " data-image-count="4">
+            <img src="images/------ /1.jpg" alt="Winner">
+          </div>
+          <div class="feature-content">
+            <h4 class="mb-2 custom-font">First Last</h4>
+            <p style="font-size: 1.1rem;">Best Functional Design</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ========================= Winners section end ========================= -->
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Carousel functionality for winners section
+    const winnerBoxes = document.querySelectorAll('.winner-box');
+    winnerBoxes.forEach(winnerBox => {
+      const imageContainer = winnerBox.querySelector('.feature-icon');
+      const folderName = imageContainer.dataset.folder;
+      const imageCount = parseInt(imageContainer.dataset.imageCount, 10) || 1;
+      let currentImageIndex = 0;
+
+      // Only create carousel if there's more than one image
+      if (imageCount > 1) {
+        // Preload images
+        for (let i = 2; i <= imageCount; i++) {
+          const img = new Image();
+          img.src = `images/${folderName}/${i}.jpg`;
+          img.style.opacity = '0';
+          imageContainer.appendChild(img);
+        }
+
+        // Create and append carousel buttons
+        const prevBtn = document.createElement('button');
+        prevBtn.className = 'carousel-btn prev';
+        const nextBtn = document.createElement('button');
+        nextBtn.className = 'carousel-btn next';
+        imageContainer.appendChild(prevBtn);
+        imageContainer.appendChild(nextBtn);
+
+        function showImage(index) {
+          imageContainer.querySelectorAll('img').forEach((img, i) => {
+            img.style.opacity = i === index ? '1' : '0';
+          });
+        }
+
+        prevBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          currentImageIndex = (currentImageIndex - 1 + imageCount) % imageCount;
+          showImage(currentImageIndex);
+        });
+
+        nextBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          currentImageIndex = (currentImageIndex + 1) % imageCount;
+          showImage(currentImageIndex);
+        });
+      }
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Carousel functionality for winners section
+    const winnerBoxes = document.querySelectorAll('.winner-box');
+    winnerBoxes.forEach(winnerBox => {
+      const imageContainer = winnerBox.querySelector('.feature-icon');
+      const folderName = imageContainer.dataset.folder;
+      const imageCount = parseInt(imageContainer.dataset.imageCount, 10) || 1;
+      let currentImageIndex = 0;
+
+      // Only create carousel if there's more than one image
+      if (imageCount > 1) {
+        // Preload images
+        for (let i = 2; i <= imageCount; i++) {
+          const img = new Image();
+          img.src = `images/${folderName}/${i}.jpg`;
+          img.style.opacity = '0';
+          imageContainer.appendChild(img);
+        }
+
+        // Create and append carousel buttons
+        const prevBtn = document.createElement('button');
+        prevBtn.className = 'carousel-btn prev';
+        const nextBtn = document.createElement('button');
+        nextBtn.className = 'carousel-btn next';
+        imageContainer.appendChild(prevBtn);
+        imageContainer.appendChild(nextBtn);
+
+        function showImage(index) {
+          imageContainer.querySelectorAll('img').forEach((img, i) => {
+            img.style.opacity = i === index ? '1' : '0';
+          });
+        }
+
+        prevBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          currentImageIndex = (currentImageIndex - 1 + imageCount) % imageCount;
+          showImage(currentImageIndex);
+        });
+
+        nextBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          currentImageIndex = (currentImageIndex + 1) % imageCount;
+          showImage(currentImageIndex);
+        });
+      }
+    });
+  });
+</script>
 
     <!-- ========================= showcase section start ========================= -->
 <style>
@@ -3552,12 +3833,12 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
         <div class="single-team wow fadeInUp" data-wow-delay="1s">
           <div class="image">
-            <img src="assets/img/team/team-1/team-tbd.png" alt="">
+            <img src="assets/img/team/team-1/team-Marc.png" alt="">
           </div>
           <div class="info">
-            <h6>1st Team<br/>Player</h6>
+            <h6>Marc<br/>Cucurella</h6>
             <div class="content-wrapper">
-              <p style="color: #001B71;">CFC</br></br></br></p>
+              <p style="color: #001B71;">1st Team Player </br>CFC</br></br></p>
               <ul class="socials">
                 <li>
                   <a href="" style="background-color: white; color: #000000; text-decoration: none; padding: 5px 10px; border: 0px solid #000000;"></a>
